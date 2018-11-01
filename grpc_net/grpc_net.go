@@ -96,7 +96,7 @@ func (self *SyNetGrpc) Broadcast(msg *api.PeerMessage, remotes ...string) {
 		for _, remote := range remotes {
 			stream := self.get(remote)
 			if stream != nil {
-				stream.send(msg, 0)
+				stream.send(msg, 1)
 			}
 		}
 	} else {
