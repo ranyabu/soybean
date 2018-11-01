@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "api";
+
+
+message PeerMessage {
+    int32 type = 1;
+
+    map<string, bytes> meta = 2;
+
+    bytes body = 3;
+}

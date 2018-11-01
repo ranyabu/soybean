@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package grpc_net;
+
+option go_package = "grpc_net";
+import "src/github.com/soybean/api/peer_message.proto";
+
+service PeerService {
+    rpc Handle (stream api.PeerMessage) returns (stream  api.PeerMessage) {
+    }
+}
+
